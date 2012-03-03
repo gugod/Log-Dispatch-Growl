@@ -1,0 +1,5 @@
+language: perl
+before_install: cpanm Dist::Zilla
+install: dzil listdeps | cpanm
+before_script: dzil authordeps | cpanm
+script: dzil test
